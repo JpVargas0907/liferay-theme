@@ -1,12 +1,22 @@
 .menu-principal{
-    margin-right: 40px;
-}
+    background: #94112D;
+    width: 100vw;
+    height: 100%;
+    padding: 0px;
 
-.menu-principal ul{
-    list-style: none;
-    display: flex;
-}
+    button {
+       border: none;
+    }
 
-.menu-principal a {
-    color: white;
+    ul{
+        list-style: none;
+    }
+
+    li:hover{
+        cursor: pointer;
+    }
+
+    a{
+        color: #000;
+    }
 }
