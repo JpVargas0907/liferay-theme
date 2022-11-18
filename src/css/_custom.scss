@@ -4,11 +4,18 @@
 
 @import 'liferay-font-awesome/scss/font-awesome';
 @import 'liferay-font-awesome/scss/glyphicons';
+@import './reset';
+
+// components
 
 @import './components/header';
 @import './components/footer';
 @import './general.scss';
 @import './components/navigation';
+
+// templates
+
+@import './templates/noticia'
 
 /* endinject */
 
