@@ -1,20 +1,28 @@
 .noticia {
     width: 100vw;
+    display: flex;
+    justify-content: center;
 
     .container{
-        width: 80%;
+        width: 60%;
         display: flex;
         flex-direction: column;
+        align-items: center;
+
+        picture{
+            width: 100%;
+        }
 
         .titulo-noticia{
+            width: 100%;
             font-weight: bold;
             font-size: 44px;
             color: #000;
         }
 
         .imagem-noticia{
-            width: 50%;
-            margin-bottom: 20px;
+            width: 100%;
+            margin-bottom: 24px;
         }
     }    
 }
