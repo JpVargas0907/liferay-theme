@@ -35,3 +35,10 @@ header{
         display: none;
     }
 }
+
+
+@include media-breakpoint-down(sm) {
+    .search-bar{
+        width: 40%;
+    }
+}

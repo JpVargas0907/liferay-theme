@@ -9,6 +9,7 @@
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	<@liferay_util["include"]
 		page=top_head_include />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"/>
 </head>
 
 <body class="${css_class}">
@@ -75,6 +76,7 @@
 						</@>
 			</#if>
 		</section>
+		
 		<footer id="footer" role="contentinfo">
 			<p class="powered-by">
 				<@liferay.language_format

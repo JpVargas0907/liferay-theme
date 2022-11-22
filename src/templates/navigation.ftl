@@ -23,7 +23,7 @@
 						${nav_item.getName()}
 					</span></a>
 				<#if nav_item.hasChildren()>
-					<ul class="navbar-nav child-menu" role="menu">
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown" role="menu">
 						<#list nav_item.getChildren() as nav_child>
 							<#assign
 								nav_child_css_class="" />
@@ -31,7 +31,7 @@
 								<#assign
 									nav_child_css_class="selected" />
 							</#if>
-							<li class="nav-item ${nav_child_css_class}" id="layout_${nav_child.getLayoutId()}" role="presentation">
+							<li class="dropdpwn-item" id="layout_${nav_child.getLayoutId()}" role="presentation">
 								<a class="nav-link text-decoration-none" href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem">
 									${nav_child.getName()}
 								</a>

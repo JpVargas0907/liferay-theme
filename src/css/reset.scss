@@ -1,4 +1,20 @@
-html:not(#__):not(#___) .overlay-content .open > .cadmin.dropdown-menu {
+html:not(#__):not(#___) .overlay-content .open>.cadmin.dropdown-menu {
     display: block;
     position: static;
+}
+
+.portlet-borderless .portlet-title-text {
+    display: none;
+}
+
+.hide-accessible {
+    display: none;
+}
+
+body {
+    background-color: #f9f9f9;
+
+    .container-fluid {
+        padding: 0px;
+    }
 }
