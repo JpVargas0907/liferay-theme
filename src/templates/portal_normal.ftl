@@ -9,7 +9,7 @@
 	<meta content="initial-scale=1.0, width=device-width" name="viewport" />
 	<@liferay_util["include"]
 		page=top_head_include />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet"/>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" />
 </head>
 
 <body class="${css_class}">
@@ -27,7 +27,6 @@
 					aria-controls="navbarTogglerDemo02"
 					aria-expanded="false"
 					aria-label="Alterna navegação">
-
 					<span class="navbar-toggler-icon" style="color:#fff; font-size:28px;"></span>
 				</button>
 				<#if !is_signed_in>
@@ -59,24 +58,25 @@
 		<#if has_navigation && is_setup_complete>
 			<#include "${full_templates_path}/navigation.ftl" />
 		</#if>
-		<section id="content">
-			<h2 class="hide-accessible sr-only" role="heading" aria-level="1">
-				${the_title}
-			</h2>
-			<#if selectable>
-				<@liferay_util["include"]
-					page=content_include />
-				<#else>
-					${portletDisplay.recycle()}
-					${portletDisplay.setTitle(the_title)}
-					<@liferay_theme["wrap-portlet"]
-						page="portlet.ftl">
-						<@liferay_util["include"]
-							page=content_include />
-						</@>
-			</#if>
-		</section>
-		
+		<div class="content">
+			<section class="content" id="content">
+				<h2 class="hide-accessible sr-only" role="heading" aria-level="1">
+					${the_title}
+				</h2>
+				<#if selectable>
+					<@liferay_util["include"]
+						page=content_include />
+					<#else>
+						${portletDisplay.recycle()}
+						${portletDisplay.setTitle(the_title)}
+						<@liferay_theme["wrap-portlet"]
+							page="portlet.ftl">
+							<@liferay_util["include"]
+								page=content_include />
+							</@>
+				</#if>
+			</section>
+		</div>
 		<footer id="footer" role="contentinfo">
 			<p class="powered-by">
 				<@liferay.language_format

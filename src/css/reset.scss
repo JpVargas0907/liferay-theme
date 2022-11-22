@@ -16,5 +16,12 @@ body {
 
     .container-fluid {
         padding: 0px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content {
+        flex-grow: 1;
     }
 }

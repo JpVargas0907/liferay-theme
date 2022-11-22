@@ -39,6 +39,6 @@ header{
 
 @include media-breakpoint-down(sm) {
     .search-bar{
-        width: 40%;
+        display: none;
     }
 }
