@@ -59,7 +59,7 @@
 			<#include "${full_templates_path}/navigation.ftl" />
 		</#if>
 		<div class="content">
-			<section class="content" id="content">
+			<section id="content">
 				<h2 class="hide-accessible sr-only" role="heading" aria-level="1">
 					${the_title}
 				</h2>
