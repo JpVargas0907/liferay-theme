@@ -4,6 +4,7 @@
       <div class="carousel-inner">
         <#list entries as curEntry>
           <#assign assetRenderer=curEntry.getAssetRenderer() />
+          <#assign URL=assetPublisherHelper.getAssetViewURL(renderRequest, renderResponse, assetRenderer, curEntry, !stringUtil.equals(assetLinkBehavior, "showFullContent" ))?keep_before_last("?") />
           <#assign docXml=saxReaderUtil.read(assetRenderer.getArticle().getContent()) />
           <#assign chamada=docXml.valueOf("//dynamic-element
             [@name='CampoDeTexto12374219' ]
@@ -17,52 +18,24 @@
             /text()") />
           <#assign urlImage=getDownloadURL(FotoXml) />
           <div class="carousel-item ${curEntry?is_first?then('active', '')}">
-            <div class="degrade"></div>
-            <img class="carousel-images d-block w-100" src="${urlImage}" alt="Primeiro Slide">
-            <div class="carousel-caption d-none d-md-block">
-              <h5 class="titulo">
-                ${curEntry.getTitle(locale)}
-              </h5>
-              <p class="chamada">
-                ${chamada}
-              </p>
-            </div>
+            <a href="${URL}">
+              <div class="degrade"></div>
+              <img class="carousel-images d-block w-100" src="${urlImage}" alt="Primeiro Slide">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="titulo">
+                  ${curEntry.getTitle(locale)}
+                </h5>
+                <p class="chamada">
+                  ${chamada}
+                </p>
+            </a>
           </div>
-        </#list>
       </div>
+      </#list>
     </div>
   </div>
+  </div>
 </#if>
-<style>
-.degrade {
-  pointer-events: none;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
-}
-
-.titulo {
-  text-shadow: 0 1px 3px rgb(0 0 0 / 80%);
-  color: #fff;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 40px;
-}
-
-.chamada {
-  text-shadow: 0 1px 3px rgb(0 0 0 / 80%);
-  color: #fff;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-}
-
-.carousel-images {
-  max-width: 100%;
-  max-height: 600px;
-}
-</style>
 
 <#function getDownloadURL xmlValue>
   <#if xmlValue?has_content>

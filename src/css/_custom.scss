@@ -14,7 +14,12 @@
 
 // templates
 
-@import './templates/noticia'
+@import './templates/noticia';
+
+//widgets
+
+@import './widgets/carrossel';
+@import './widgets/listagem_de_noticias';
 
 /* endinject */
 
