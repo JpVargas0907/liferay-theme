@@ -77,12 +77,12 @@
 				</#if>
 			</section>
 		</div>
-		<footer id="footer" role="contentinfo">
+		<footer class="d-flex justify-content-between align-items-center" id="footer" role="contentinfo">
 			<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments=" ${site_name}" key="go-to-x" />">
 			<img alt="${logo_description}" height="80px" src="${site_logo}" width="80px" />
 			</a>
 			<p class="powered-by">
-				© Copyright 2000-2022 Fifa World Cup Comunicação e Participações S.A.
+				© Copyright 2000-2022 Fifa World Cup
 			</p>
 		</footer>
 	</div>

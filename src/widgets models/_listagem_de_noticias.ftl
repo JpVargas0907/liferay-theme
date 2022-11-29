@@ -21,7 +21,7 @@
 				/text()") />
 			<#assign urlImage=getDownloadURL(FotoXml) />
 			<a href="${URL}">
-				<div class="noticia d-none d-lg-flex d-md-flex row">
+				<div class="noticia-listada d-none d-lg-flex d-md-flex row">
 					<div class="col-4">
 						<img class="imagem-noticia-listada" src="${urlImage}" />
 					</div>
