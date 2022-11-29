@@ -78,10 +78,11 @@
 			</section>
 		</div>
 		<footer id="footer" role="contentinfo">
+			<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments=" ${site_name}" key="go-to-x" />">
+			<img alt="${logo_description}" height="80px" src="${site_logo}" width="80px" />
+			</a>
 			<p class="powered-by">
-				<@liferay.language_format
-					arguments='<a href="http://www.liferay.com" rel="external">Liferay</a>'
-					key="powered-by-x" />
+				© Copyright 2000-2022 Fifa World Cup Comunicação e Participações S.A.
 			</p>
 		</footer>
 	</div>

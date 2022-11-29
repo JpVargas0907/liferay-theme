@@ -1,5 +1,5 @@
 <#if entries?has_content>
-  <div class="container">
+  <div class="carrossel">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <#list entries as curEntry>
@@ -21,11 +21,11 @@
             <a href="${URL}">
               <div class="degrade"></div>
               <img class="carousel-images d-block w-100" src="${urlImage}" alt="Primeiro Slide">
-              <div class="carousel-caption d-none d-md-block">
+              <div class="carousel-caption">
                 <h5 class="titulo">
                   ${curEntry.getTitle(locale)}
                 </h5>
-                <p class="chamada">
+                <p class="chamada d-none d-md-block">
                   ${chamada}
                 </p>
             </a>
