@@ -19,7 +19,7 @@
 	<@liferay.control_menu />
 	<div class="corpo container-fluid position-relative" id="wrapper">
 		<header class="d-flex" id="banner" role="banner">
-			<div class="header-content">
+			<div class="container header-content">
 				<#if !is_signed_in>
 					<a
 						class="entrar"
@@ -62,8 +62,10 @@
 				<#include "${full_templates_path}/navigation.ftl" />
 			</#if>
 		</div>
-		<div class="d-flex justify-content-end mr-4" onClick="darkFunction()">
-			<input type="checkbox" data-toggle="toggle" data-on="ON" data-off="OFF" data-onstyle="dark" data-offstyle="light">
+		<div class="container">
+			<div class="d-flex justify-content-end" onClick="darkFunction()">
+				<input type="checkbox" data-toggle="toggle" data-on="ON" data-off="OFF" data-onstyle="dark" data-offstyle="light">
+			</div>
 		</div>
 		<div class="content">
 			<section id="content">
@@ -84,13 +86,15 @@
 				</#if>
 			</section>
 		</div>
-		<footer class="d-flex justify-content-between align-items-center" id="footer" role="contentinfo">
-			<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments=" ${site_name}" key="go-to-x" />">
-			<img alt="${logo_description}" height="80px" src="${site_logo}" />
-			</a>
-			<p class="powered-by">
-				© Copyright Fifa
-			</p>
+		<footer id="footer" role="contentinfo">
+			<div class="container d-flex justify-content-between align-items-center">
+				<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments=" ${site_name}" key="go-to-x" />">
+				<img alt="${logo_description}" height="80px" src="${site_logo}" />
+				</a>
+				<p class="powered-by">
+					© Copyright Fifa
+				</p>
+			</div>
 		</footer>
 		<div vw class="enabled">
 			<div vw-access-button class="active"></div>

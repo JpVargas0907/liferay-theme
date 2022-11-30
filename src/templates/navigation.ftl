@@ -3,6 +3,7 @@
 	aria-label="<@liferay.language key=" site-pages" />" class="${nav_css_class}" id=",navigation" role="navigation">
 
 <div id="navbarToggle" class="collapse navbar-collapse">
+	<div class="container">
 	<ul
 		role="menu-bar"
 		class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -31,7 +32,7 @@
 								<#assign
 									nav_child_css_class="selected" />
 							</#if>
-							<li class="dropdpwn-item" id="layout_${nav_child.getLayoutId()}" role="presentation">
+							<li class="drowpdown-menu-item" id="layout_${nav_child.getLayoutId()}" role="presentation">
 								<a class="nav-link text-decoration-none" href="${nav_child.getURL()}" ${nav_child.getTarget()} role="menuitem">
 									${nav_child.getName()}
 								</a>
@@ -42,5 +43,5 @@
 			</li>
 		</#list>
 	</ul>
-	
+	</div>
 </div>
