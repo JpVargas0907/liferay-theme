@@ -40,5 +40,8 @@
 		"status": "gulp status",
 		"upgrade": "gulp upgrade",
 		"watch": "gulp watch"
+	},
+	"dependencies": {
+		"bootstrap4-toggle": "^3.6.1"
 	}
 }

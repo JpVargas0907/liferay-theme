@@ -10,6 +10,7 @@
 	<@liferay_util["include"]
 		page=top_head_include />
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" />
+	<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
 </head>
 
 <body class="${css_class}">
@@ -50,7 +51,7 @@
 					aria-label="Alterna navegação">
 					<span class="navbar-toggler-icon" style="color:#fff; font-size:28px;"></span>
 				</button>
-				<div class="search-bar">
+				<div class="d-none d-lg-block search-bar">
 					<@liferay.search_bar />
 				</div>
 			</div>
@@ -59,6 +60,9 @@
 			<#if has_navigation && is_setup_complete>
 				<#include "${full_templates_path}/navigation.ftl" />
 			</#if>
+		</div>
+		<div class="d-flex justify-content-end mr-4" onClick="darkFunction()">
+			<input type="checkbox" data-toggle="toggle" data-on="ON" data-off="OFF" data-onstyle="dark" data-offstyle="light">
 		</div>
 		<div class="content">
 			<section id="content">
@@ -84,7 +88,7 @@
 			<img alt="${logo_description}" height="80px" src="${site_logo}" />
 			</a>
 			<p class="powered-by">
-				© Copyright Fifa World Cup 2022
+				© Copyright Fifa
 			</p>
 		</footer>
 	</div>
@@ -94,6 +98,13 @@
 		page=bottom_include />
 	<!-- inject:js -->
 	<!-- endinject  -->
+	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+	<script>
+	function darkFunction() {
+		let element = document.body;
+		element.classList.toggle("dark-mode");
+	}
+	</script>
 </body>
 
 </html>

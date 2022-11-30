@@ -44,34 +44,3 @@
 	</ul>
 	
 </div>
-<style>
-
-.dark-mode {
-  background-color: #343A40;
-  color: white;
-}
-
-.dark-mode header {
-	background: black;
-}
-
-
-.dark-mode nav {
-	background: black!important;
-}
-
-.dark-mode footer {
-	background: black;
-}
-
-.dark-mode .portlet-content{
-	background: #343A40;
-}
-
-</style>
-<script>
-function darkFunction() {
-   let element = document.body;
-   element.classList.toggle("dark-mode");
-}
-</script>
