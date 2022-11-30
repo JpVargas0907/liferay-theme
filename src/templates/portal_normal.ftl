@@ -22,6 +22,7 @@
 			<div class="header-content">
 				<#if !is_signed_in>
 					<a
+						class="entrar"
 						data-redirect="${is_login_redirect_required?string}"
 						href="/c/portal/login"
 						id="sign-in"
