@@ -16,19 +16,9 @@
 	<@liferay_util["include"]
 		page=body_top_include />
 	<@liferay.control_menu />
-	<div class="container-fluid position-relative" id="wrapper">
+	<div class="corpo container-fluid position-relative" id="wrapper">
 		<header class="d-flex" id="banner" role="banner">
 			<div class="header-content">
-				<button
-					class="d-lg-none navbar-toggler navbar-dark collapsed"
-					type="button"
-					data-toggle="collapse"
-					data-target="#navbarToggle"
-					aria-controls="navbarTogglerDemo02"
-					aria-expanded="false"
-					aria-label="Alterna navegação">
-					<span class="navbar-toggler-icon" style="color:#fff; font-size:28px;"></span>
-				</button>
 				<#if !is_signed_in>
 					<a
 						data-redirect="${is_login_redirect_required?string}"
@@ -41,7 +31,7 @@
 				<div id="heading">
 					<div aria-level="1" class="site-title" role="heading">
 						<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments=" ${site_name}" key="go-to-x" />">
-						<img alt="${logo_description}" height="80px" src="${site_logo}" width="80px" />
+						<img alt="${logo_description}" height="80px" src="${site_logo}" />
 						</a>
 						<#if show_site_name>
 							<span class="site-name" title="<@liferay.language_format arguments=" ${site_name}" key="go-to-x" />">
@@ -50,14 +40,26 @@
 						</#if>
 					</div>
 				</div>
+				<button
+					class="d-lg-none navbar-toggler navbar-dark collapsed"
+					type="button"
+					data-toggle="collapse"
+					data-target="#navbarToggle"
+					aria-controls="navbarTogglerDemo02"
+					aria-expanded="false"
+					aria-label="Alterna navegação">
+					<span class="navbar-toggler-icon" style="color:#fff; font-size:28px;"></span>
+				</button>
 				<div class="search-bar">
 					<@liferay.search_bar />
 				</div>
 			</div>
 		</header>
-		<#if has_navigation && is_setup_complete>
-			<#include "${full_templates_path}/navigation.ftl" />
-		</#if>
+		<div>
+			<#if has_navigation && is_setup_complete>
+				<#include "${full_templates_path}/navigation.ftl" />
+			</#if>
+		</div>
 		<div class="content">
 			<section id="content">
 				<h2 class="hide-accessible sr-only" role="heading" aria-level="1">
@@ -79,10 +81,10 @@
 		</div>
 		<footer class="d-flex justify-content-between align-items-center" id="footer" role="contentinfo">
 			<a class="${logo_css_class}" href="${site_default_url}" title="<@liferay.language_format arguments=" ${site_name}" key="go-to-x" />">
-			<img alt="${logo_description}" height="80px" src="${site_logo}" width="80px" />
+			<img alt="${logo_description}" height="80px" src="${site_logo}" />
 			</a>
 			<p class="powered-by">
-				© Copyright 2000-2022 Fifa World Cup
+				© Copyright Fifa World Cup 2022
 			</p>
 		</footer>
 	</div>
