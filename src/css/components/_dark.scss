@@ -3,27 +3,16 @@
   color: white;
 }
 
-.dark-mode .titulo-noticia-mobile {
-	color: white;  
-}
+.dark-mode{
+	.noticia .titulo-noticia, .titulo-noticia-listada, .titulo-noticia-mobile{
+		color: white;
+	}
 
-.dark-mode .titulo-noticia-listada {
-	color: white;  
-}
+	header, nav, footer{
+		background-color: black;
+	}
 
-.dark-mode header {
-	background: black;
-}
-
-
-.dark-mode nav {
-	background: black!important;
-}
-
-.dark-mode footer {
-	background: black;
-}
-
-.dark-mode .portlet-content{
-	background: #343A40;
+	.portlet-content{
+		background-color: #343A40;
+	}
 }

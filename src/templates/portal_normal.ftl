@@ -91,6 +91,12 @@
 				© Copyright Fifa
 			</p>
 		</footer>
+		<div vw class="enabled">
+			<div vw-access-button class="active"></div>
+			<div vw-plugin-wrapper>
+				<div class="vw-plugin-top-wrapper"></div>
+			</div>
+		</div>
 	</div>
 	<@liferay_util["include"]
 		page=body_bottom_include />
@@ -98,6 +104,10 @@
 		page=bottom_include />
 	<!-- inject:js -->
 	<!-- endinject  -->
+	<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+	<script>
+	new window.VLibras.Widget('https://vlibras.gov.br/app');
+	</script>
 	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 	<script>
 	function darkFunction() {

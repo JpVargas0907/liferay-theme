@@ -1,5 +1,5 @@
 <nav
-	class="menu-principal navbar navbar-expand-lg navbar-dark bg-dark"
+	class="menu-principal navbar navbar-expand-lg navbar-dark"
 	aria-label="<@liferay.language key=" site-pages" />" class="${nav_css_class}" id=",navigation" role="navigation">
 
 <div id="navbarToggle" class="collapse navbar-collapse">
